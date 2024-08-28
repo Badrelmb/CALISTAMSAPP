@@ -9,18 +9,33 @@
 /* Begin PBXBuildFile section */
 		1F7493A52C60B23800607700 /* Calista_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7493A42C60B23800607700 /* Calista_appApp.swift */; };
 		1F7493A72C60B23800607700 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7493A62C60B23800607700 /* ContentView.swift */; };
-		1F7493A92C60B23800607700 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7493A82C60B23800607700 /* Item.swift */; };
 		1F7493AB2C60B23A00607700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7493AA2C60B23A00607700 /* Assets.xcassets */; };
 		1F7493AE2C60B23A00607700 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7493AD2C60B23A00607700 /* Preview Assets.xcassets */; };
+		1F7493B52C60B34200607700 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7493B42C60B34200607700 /* SplashScreenView.swift */; };
+		1F7493B82C60B5E700607700 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 1F7493B72C60B5E700607700 /* SQLite */; };
+		1F7493CE2C60CA1900607700 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7493CD2C60CA1900607700 /* DatabaseManager.swift */; };
+		1F7493D02C60CD2F00607700 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7493CF2C60CD2F00607700 /* ItemListView.swift */; };
+		1F7493D22C60CE3600607700 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7493D12C60CE3600607700 /* AddItemView.swift */; };
+		1F7493D42C60CE7000607700 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7493D32C60CE7000607700 /* ImagePicker.swift */; };
+		1F7493D62C60D06F00607700 /* ViewStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7493D52C60D06F00607700 /* ViewStatsView.swift */; };
+		1F7493D82C64AF9300607700 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7493D72C64AF9200607700 /* CustomTextField.swift */; };
+		1FD11F6F2C7C52C600CB1909 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FD11F6D2C7C52C600CB1909 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F7493A12C60B23800607700 /* Calista-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calista-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7493A42C60B23800607700 /* Calista_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calista_appApp.swift; sourceTree = "<group>"; };
 		1F7493A62C60B23800607700 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1F7493A82C60B23800607700 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1F7493AA2C60B23A00607700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F7493AD2C60B23A00607700 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1F7493B42C60B34200607700 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		1F7493CD2C60CA1900607700 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = SOURCE_ROOT; };
+		1F7493CF2C60CD2F00607700 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = SOURCE_ROOT; };
+		1F7493D12C60CE3600607700 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = SOURCE_ROOT; };
+		1F7493D32C60CE7000607700 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = SOURCE_ROOT; };
+		1F7493D52C60D06F00607700 /* ViewStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatsView.swift; sourceTree = SOURCE_ROOT; };
+		1F7493D72C64AF9200607700 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = SOURCE_ROOT; };
+		1FD11F6E2C7C52C600CB1909 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7493B82C60B5E700607700 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +53,7 @@
 		1F7493982C60B23800607700 = {
 			isa = PBXGroup;
 			children = (
+				1FD11F6D2C7C52C600CB1909 /* Model.xcdatamodeld */,
 				1F7493A32C60B23800607700 /* Calista-app */,
 				1F7493A22C60B23800607700 /* Products */,
 			);
@@ -53,9 +70,15 @@
 		1F7493A32C60B23800607700 /* Calista-app */ = {
 			isa = PBXGroup;
 			children = (
+				1F7493D72C64AF9200607700 /* CustomTextField.swift */,
+				1F7493D52C60D06F00607700 /* ViewStatsView.swift */,
+				1F7493D32C60CE7000607700 /* ImagePicker.swift */,
+				1F7493D12C60CE3600607700 /* AddItemView.swift */,
+				1F7493CF2C60CD2F00607700 /* ItemListView.swift */,
+				1F7493CD2C60CA1900607700 /* DatabaseManager.swift */,
 				1F7493A42C60B23800607700 /* Calista_appApp.swift */,
 				1F7493A62C60B23800607700 /* ContentView.swift */,
-				1F7493A82C60B23800607700 /* Item.swift */,
+				1F7493B42C60B34200607700 /* SplashScreenView.swift */,
 				1F7493AA2C60B23A00607700 /* Assets.xcassets */,
 				1F7493AC2C60B23A00607700 /* Preview Content */,
 			);
@@ -86,6 +109,9 @@
 			dependencies = (
 			);
 			name = "Calista-app";
+			packageProductDependencies = (
+				1F7493B72C60B5E700607700 /* SQLite */,
+			);
 			productName = "Calista-app";
 			productReference = 1F7493A12C60B23800607700 /* Calista-app.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 1F7493982C60B23800607700;
+			packageReferences = (
+				1F7493B62C60B5E700607700 /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = 1F7493A22C60B23800607700 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,8 +170,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7493A72C60B23800607700 /* ContentView.swift in Sources */,
-				1F7493A92C60B23800607700 /* Item.swift in Sources */,
+				1F7493D02C60CD2F00607700 /* ItemListView.swift in Sources */,
+				1F7493D22C60CE3600607700 /* AddItemView.swift in Sources */,
+				1F7493D82C64AF9300607700 /* CustomTextField.swift in Sources */,
+				1F7493CE2C60CA1900607700 /* DatabaseManager.swift in Sources */,
+				1F7493D62C60D06F00607700 /* ViewStatsView.swift in Sources */,
+				1F7493D42C60CE7000607700 /* ImagePicker.swift in Sources */,
 				1F7493A52C60B23800607700 /* Calista_appApp.swift in Sources */,
+				1FD11F6F2C7C52C600CB1909 /* Model.xcdatamodeld in Sources */,
+				1F7493B52C60B34200607700 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +219,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -201,6 +238,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -246,6 +285,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -258,6 +298,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -279,9 +321,12 @@
 				DEVELOPMENT_TEAM = A76D5XM2P3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to take photos of items.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to select photos of items.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -308,9 +353,12 @@
 				DEVELOPMENT_TEAM = A76D5XM2P3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to take photos of items.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to select photos of items.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -348,6 +396,39 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F7493B62C60B5E700607700 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F7493B72C60B5E700607700 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F7493B62C60B5E700607700 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		1FD11F6D2C7C52C600CB1909 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FD11F6E2C7C52C600CB1909 /* Model.xcdatamodel */,
+			);
+			currentVersion = 1FD11F6E2C7C52C600CB1909 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = "/Users/badrelmalkiberrada/Desktop/Calista-app/Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1F7493992C60B23800607700 /* Project object */;
 }

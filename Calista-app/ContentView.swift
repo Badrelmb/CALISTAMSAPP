@@ -1,61 +1,75 @@
-//
-//  ContentView.swift
-//  Calista-app
-//
-//  Created by Badr El malki berrada on 8/5/24.
-//
-
 import SwiftUI
-import SwiftData
+import UIKit
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @State private var showAddItemView: Bool = false
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        NavigationView {
+            VStack(spacing: 20) {
+                // Logo at the top
+                Image("Calista_logo2") // Make sure this matches the name of your logo image in Assets.xcassets
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 250)
+                    .padding(20)
+
+                // Welcome text
+                Text("Welcome to your product manager app\nGET RICH BABY !")
+                    .font(.title)
+                    .multilineTextAlignment(.center)
+                    .padding(20)
+
+                // Buttons stacked vertically
+                VStack(spacing: 10) {
+                    NavigationLink(destination: ItemListView()) {
+                        Text("View items")
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+
+                    Button(action: {
+                        showAddItemView = true
+                    }) {
+                        Text("Add items")
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .sheet(isPresented: $showAddItemView) {
+                        AddItemView(isPresented: $showAddItemView, onSave: {
+                            // Perform any additional actions after saving
+                        })
+                    }
+
+                    NavigationLink(destination: ViewStatsView()) {
+                        Text("View stats")
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.orange)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
+                .padding()
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+                Spacer() // To push content to the top
             }
+            .padding()
         }
     }
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

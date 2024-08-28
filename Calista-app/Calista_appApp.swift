@@ -7,26 +7,42 @@
 
 import SwiftUI
 import SwiftData
+import CoreData
 
 @main
 struct Calista_appApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+    @State private var showSplashScreen = true
 
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
+    // Add the persistent container for Core Data
+    let persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "Model")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                // Handle the error appropriately
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
     }()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Group {
+                if showSplashScreen {
+                    SplashScreenView()
+                        .onAppear {
+                            // Simulate a delay of 2 seconds
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                withAnimation {
+                                    self.showSplashScreen = false
+                                }
+                            }
+                        }
+                } else {
+                    ContentView()
+                        .environment(\.managedObjectContext, persistentContainer.viewContext) // Inject Core Data context
+                }
+            }
         }
-        .modelContainer(sharedModelContainer)
     }
 }
